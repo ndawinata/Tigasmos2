@@ -1,12 +1,57 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, StatusBar, Dimensions, ImageBackground, Image, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, StatusBar, Dimensions, ImageBackground, Image, ScrollView, Button, Linking } from 'react-native'
 import BG from '../Assets/img/bg2.png'
 import Icon1 from 'react-native-vector-icons/Ionicons';
+import PushNotification from "react-native-push-notification";
+import OpenApplication from 'react-native-open-application';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+PushNotification.configure({
+    onRegister: function (token) {
+        console.log("TOKEN:", token);
+    },
+
+    onNotification: function (notification) {
+        console.log("NOTIFICATION:", notification);
+        OpenApplication.openApplication('com.tigasmos2');
+    },
+
+    onAction: function (notification) {
+        console.log("ACTION:", notification.action);
+        console.log("NOTIFICATION:", notification);
+    },
+
+    onRegistrationError: function(err) {
+        console.error(err.message, err);
+    },
+
+    permissions: {
+        alert: true,
+        badge: true,
+        sound: true,
+    },
+
+    popInitialNotification: true,
+    requestPermissions: true,
+});
+
 export default class Dashboard extends Component {
+
+    handlePush(){
+        PushNotification.localNotification({
+            ticker: "My Notification Ticker", // (optional)
+            bigText: "My big text that will be shown when notification is expanded", // (optional) default: "message" prop
+            subText: "This is a subText", // (optional) default: none
+            color: "red", // (optional) default: system default
+            vibrate: true, // (optional) default: true
+            vibration: 300, // vibration length in milliseconds, ignored if vibrate=false, default: 1000
+            title: "My Notification Title", // (optional)
+            message: "My Notification Message", // (required)
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -26,6 +71,10 @@ export default class Dashboard extends Component {
                             <Text style={{color:'#fff', fontSize:18}}>Tide Gauge</Text>
                         </View>
                         <View style={{marginTop:35, marginBottom:20}}>
+                            <Button
+                                title="Press me"
+                                onPress={() => {this.handlePush()}}
+                            />
                             <Text style={{color:'#fff', fontSize:18}}>Tide Gauge Monitoring Station</Text>
                         </View>
                         <ScrollView showsVerticalScrollIndicator={false} style={styles.box}>

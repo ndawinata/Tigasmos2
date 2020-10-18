@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "23877987245",
+    "firebase_url": "https://tigasmos2.firebaseio.com",
+    "project_id": "tigasmos2",
+    "storage_bucket": "tigasmos2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23877987245:android:df647253b978b107c0cf24",
+        "android_client_info": {
+          "package_name": "com.tigasmos2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23877987245-olts44viu18ak0jnh80lml4buo1ralnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-MUZIUBgZlJyRUJU9PumnxXR1DkRyFbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23877987245-olts44viu18ak0jnh80lml4buo1ralnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

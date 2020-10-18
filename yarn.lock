@@ -5666,6 +5666,11 @@ react-native-gesture-handler@^1.8.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-open-application@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-native-open-application/-/react-native-open-application-1.0.14.tgz#e856908711e9c736e281813c71aab2a48ab90600"
+  integrity sha512-/8grAEIqb5xn2wa7d45/kZK/CUF0vYa+y4SqzH6XusUm5WLaEmvMU9j+Dy8g+OIxRmPrv8VNEwXbauFGYNbiug==
+
 react-native-paper@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.2.0.tgz#534c0f9dbeecfd73d20f1f7b1ef3df32aa2ca4b0"
@@ -5682,6 +5687,11 @@ react-native-progress@^4.1.2:
   dependencies:
     "@react-native-community/art" "^1.1.2"
     prop-types "^15.7.2"
+
+react-native-push-notification@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-push-notification/-/react-native-push-notification-6.1.1.tgz#58bc2e3619e79a2bc93078cb0b761ff8d7bbb2e9"
+  integrity sha512-PiBmogOloztUqpSlNsB8i27wZ84CXXhC4GGvrG7Eev7OP9iA3PoQ3+AWtW3dBfWzXlRJzFg39x1jlhvvMWNN0Q==
 
 react-native-reanimated@^1.13.1:
   version "1.13.1"
